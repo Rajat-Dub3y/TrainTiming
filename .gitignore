@@ -1,0 +1,11 @@
+model/myenv
+
+website/package-lock.json
+website/node_modules
+website/backend/.env
+website/backend/node_modules
+website/backend/package-lock.json
+website/backend/RouteSearch.txt
+website/fronend/
+website/
+website/
