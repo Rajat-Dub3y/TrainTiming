@@ -1,12 +1,16 @@
 import express from "express"
 import dotenv from "dotenv"
 import connectDB from "./utils/ConnectDB.js"
-import { directTrains } from "./controllers/routeSreachController.js"
+
 import cookieParser from "cookie-parser"
 import cors from "cors"
 
+import RouteRuter from "./routes/RouteRouter.js"
+import TrainRoute from "./routes/TrainRouter.js"
+
 
 dotenv.config()
+
 
 connectDB()
 
@@ -33,7 +37,9 @@ app.get("",(req,res)=>{
 })
 
 
-app.post("/api/train",directTrains)
+app.use("/api/route",RouteRuter)
+
+app.use("/api/train",TrainRoute)
 
 // Listen
 
